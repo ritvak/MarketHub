@@ -7,7 +7,7 @@ const ProductList = () => {
 
   useEffect(() => {
     getAllProducts();
-  }, []);
+  }, );
 
   const api = (msg) => new APIUtils(msg);
 

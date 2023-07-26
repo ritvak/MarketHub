@@ -6,7 +6,7 @@ const UserList = () => {
 
   useEffect(() => {
     getAllUsers();
-  }, []);
+  }, );
 
   const api = (msg) => new APIUtils(msg);
 

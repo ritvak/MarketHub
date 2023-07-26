@@ -18,9 +18,9 @@ import store from "../../redux/store";
 import { logout } from "../../redux/actions/authActions";
 import { useSelector } from "react-redux";
 
-const { SubMenu } = Menu;
+// const { SubMenu } = Menu;
 const { Header, Sider, Content } = Layout;
-const { Search } = Input;
+// const { Search } = Input;
 
 const Dashboard = () => {
   const navigate = useNavigate();

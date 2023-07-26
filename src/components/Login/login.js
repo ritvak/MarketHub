@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Form, Input, Layout, theme } from "antd";
+import { Button, Form, Input, Layout } from "antd";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import useSimpleReactValidator from "../../helpers/useReactSimpleValidator";
@@ -12,9 +12,9 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const {
-    token: { colorBgContainer },
-  } = theme.useToken();
+  // const {
+  //   token: { colorBgContainer },
+  // } = theme.useToken();
 
   const [loading, setLoading] = useState(false);
   const [fields, setFields] = useState({

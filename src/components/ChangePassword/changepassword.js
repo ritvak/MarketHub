@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Input, Button, message } from "antd";
-import axios from "axios";
 import "../ChangePassword/changepassword.css";
 import APIUtils from "../../helpers/APIUtils";
 

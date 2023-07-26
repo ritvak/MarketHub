@@ -1,18 +1,20 @@
 
 
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect,useRef } from "react";
+
+// import React, { useEffect, useState, useRef } from "react";
 import { Chart } from "chart.js/auto";
 import APIUtils from "../../helpers/APIUtils";
 import "./chart.css";
 
 
 const UserList = () => {
-  const [users, setUsers] = useState([]);
+  // const [users, setUsers] = useState([]);
   const chartRef = useRef(null);
 
   useEffect(() => {
     getAllUsers();
-  }, []);
+  },);
 
   const api = (msg) => new APIUtils(msg);
 
@@ -22,7 +24,7 @@ const UserList = () => {
     try {
       const response = await api().getAllUsers();
       if (Array.isArray(response.data.userData)) {
-        setUsers(response.data.userData);
+        // setUsers(response.data.userData);
         createMonthlyRegistrationChart(response.data.userData);
       } else {
         console.error("Invalid data format. Expected an array:", response.data);
@@ -109,18 +111,18 @@ const UserList = () => {
     return monthNames[month];
   };
 
-  const chartContainerStyle = {
-    position: 'relative',
-    width: '100%',
-    height: '400px', 
-    margin: '20px 0',
-  };
+  // const chartContainerStyle = {
+  //   position: 'relative',
+  //   width: '100%',
+  //   height: '400px', 
+  //   margin: '20px 0',
+  // };
 
 
-  const chartCanvasStyle = {
-    width: '100%',
-    height: '100%',
-  };
+  // const chartCanvasStyle = {
+  //   width: '100%',
+  //   height: '100%',
+  // };
 
 
   return (

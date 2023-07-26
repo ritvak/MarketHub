@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
-import { Route, useNavigate, Routes } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+// import { Route, useNavigate, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+// import { useSelector } from 'react-redux';
 import { Layout } from 'antd';
 import Loader from './shared/loader';
 
@@ -11,8 +12,8 @@ const Dashboard = lazy(() => import('./components/Dashboard/dashboard'));
 const { Content } = Layout;
 
 const Routing = () => {
-   const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
-  const navigate = useNavigate();
+  //  const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
+  // const navigate = useNavigate();
   const PublicRoutes = [
     {
       export: true,
@@ -26,13 +27,13 @@ const Routing = () => {
     },
   ].filter(cur => cur);
 
-  const PublicRoute = ({ children }) => {
-    return isAuthenticated ? navigate('/dashboard', { replace: true }) : children;
-  };
+  // const PublicRoute = ({ children }) => {
+  //   return isAuthenticated ? navigate('/dashboard', { replace: true }) : children;
+  // };
 
-  const handleLogin = () => {
-    navigate('/dashboard');
-  };
+  // const handleLogin = () => {
+  //   navigate('/dashboard');
+  // };
 
   return (
     <Suspense fallback={<Loader />}>
