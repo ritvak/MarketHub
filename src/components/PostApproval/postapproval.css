@@ -1,0 +1,45 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+  gap: 20px;
+}
+
+.product-card {
+  border: 1px solid gray;
+  padding: 20px;
+  background-color: #f2f2f2;
+  color: #333333;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.product-card h2 {
+  color: #007bff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.product-card p {
+  color: #666666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-card button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,69 @@
+.menu-item-wrapper.markethub-item {
+    font-weight: bold;
+}
+
+.menu-item-text {
+    font-size: 16px;
+}
+
+.sidebar-divider {
+    margin: 12px 0;
+    height: 1px;
+    background-color: #e8e8e8;
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    background-color: green;
+    border-radius: 50%;
+    margin-left: 8px;
+}
+
+.ant-badge.ant-badge-status .ant-badge-status-dot {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.logo-image {
+    width: 35px;
+    height: 35px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.menu-item-wrapper.markethub-item {
+    font-weight: bold;
+}
+
+.menu-item-wrapper.markethub-item.ant-menu-item-selected {
+    background-color: transparent;
+}
+
+.menu-item-wrapper.markethub-item.ant-menu-item-selected::after {
+    display: none;
+}
+
+.menu-item-text {
+    font-size: 16px;
+}
+
+.sidebar-divider {
+    margin: 12px 0;
+    height: 1px;
+    background-color: #e8e8e8;
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    background-color: green;
+    border-radius: 50%;
+    margin-left: 8px;
+}
+
+.ant-badge.ant-badge-status .ant-badge-status-dot {
+    width: 16px !important;
+    height: 16px !important;
+}
+
