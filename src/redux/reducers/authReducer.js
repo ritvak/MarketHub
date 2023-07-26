@@ -5,7 +5,7 @@ const initialState = {
 };
 
 const AuthReducer = (state = initialState, action) => {
-  const { type, payload, token } = action;
+  const { type, payload } = action;
 
   switch (type) {
     case 'EXISTING_USER':
