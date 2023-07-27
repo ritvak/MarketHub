@@ -1,15 +1,11 @@
-
-
 import React, { useEffect,useRef } from "react";
 
-// import React, { useEffect, useState, useRef } from "react";
 import { Chart } from "chart.js/auto";
 import APIUtils from "../../helpers/APIUtils";
 import "./chart.css";
 
 
 const UserList = () => {
-  // const [users, setUsers] = useState([]);
   const chartRef = useRef(null);
 
   useEffect(() => {
@@ -18,13 +14,10 @@ const UserList = () => {
 
   const api = (msg) => new APIUtils(msg);
 
-  
-
   const getAllUsers = async () => {
     try {
       const response = await api().getAllUsers();
       if (Array.isArray(response.data.userData)) {
-        // setUsers(response.data.userData);
         createMonthlyRegistrationChart(response.data.userData);
       } else {
         console.error("Invalid data format. Expected an array:", response.data);

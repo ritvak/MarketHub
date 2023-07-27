@@ -12,9 +12,6 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // const {
-  //   token: { colorBgContainer },
-  // } = theme.useToken();
 
   const [loading, setLoading] = useState(false);
   const [fields, setFields] = useState({
@@ -57,7 +54,7 @@ const Login = () => {
         }}
       >
         <div className="container">
-          <h1>Login Form</h1>
+          <h1>Admin Login</h1>
           <Form
             name="basic"
             labelCol={{

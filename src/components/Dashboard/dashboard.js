@@ -1,5 +1,6 @@
+
 import React, { useState, useEffect } from "react";
-import { Menu, Layout, Input } from "antd";
+import { Menu, Layout, Avatar } from "antd";
 import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
@@ -18,16 +19,12 @@ import store from "../../redux/store";
 import { logout } from "../../redux/actions/authActions";
 import { useSelector } from "react-redux";
 
-// const { SubMenu } = Menu;
 const { Header, Sider, Content } = Layout;
-// const { Search } = Input;
 
 const Dashboard = () => {
   const navigate = useNavigate();
-
   const [collapsed, setCollapsed] = useState(false);
-  const [selectedMenuItem, setSelectedMenuItem] = useState("/admin-dashboard"); 
-
+  const [selectedMenuItem, setSelectedMenuItem] = useState("/admin-dashboard");
   const { isAuthenticated } = useSelector((state) => state.auth);
 
   const handleMenuClick = ({ key }) => {
@@ -56,8 +53,14 @@ const Dashboard = () => {
   const render = () => {
     if (isAuthenticated) {
       return (
-        <Layout style={{ minHeight: "100vh" }}>
-          <Sider trigger={null} collapsible collapsed={collapsed}>
+        <Layout style={{ minHeight: "100vh" ,margin:0}}>
+          <Sider
+            trigger={null}
+            collapsible
+            collapsed={collapsed}
+            breakpoint="md" 
+            collapsedWidth={0} 
+          >
             <div className="logo" />
             <Menu
               theme="dark"
@@ -74,12 +77,12 @@ const Dashboard = () => {
               <Menu.Item key="/posts" icon={<ShoppingCartOutlined />}>
                 Post Approval
               </Menu.Item>
-              <Menu.Item key="/password" icon={<ShoppingCartOutlined />}>
+              <Menu.Item key="/password" icon={<SearchOutlined />}>
                 Change Password
               </Menu.Item>
               <Menu.Item
                 key="/logout"
-                icon={<LogoutOutlined onClick={handleLogout} />}
+                icon={<LogoutOutlined />}
                 danger
               >
                 Logout
@@ -102,19 +105,20 @@ const Dashboard = () => {
                   onClick={toggleCollapse}
                 />
               )}
-              <div style={{ marginLeft: "200px", flex: 1, float: "right" }}>
-                <Input
-                  placeholder="rt664810@dal.ca"
-                  prefix={<SearchOutlined />}
-                  style={{ width: "80%" }}
-                />
-              </div>
+             
+
+<div style={{ marginLeft: "250px", flex: 1, float: "right", display: "flex", alignItems: "center",justifyContent: "flex-end", }}>
+    <Avatar style={{ backgroundColor: "#87d068", marginRight: "10px" }} icon={<UserOutlined />} />
+    <span>rt664810@dal.ca</span>
+  </div>
+
+
             </Header>
-            <Content style={{ margin: "16px" }}>
+            <Content >
               <div
-                style={{ padding: "24px", background: "#fff", minHeight: 360 }}
+                style={{ padding: "24px",  minHeight: 360 }}
               >
-                {selectedMenuItem === "/admin-dashboard" && <Chart />}{" "}
+                {selectedMenuItem === "/admin-dashboard" && <Chart />}
                 {selectedMenuItem === "/statistics" && (
                   <div>Statistics Content</div>
                 )}
@@ -122,17 +126,19 @@ const Dashboard = () => {
                 {selectedMenuItem === "/posts" && <PostApproval />}
                 {selectedMenuItem === "/password" && <ChangePassword />}
                 {selectedMenuItem === "/logout" && <div>Logout Content</div>}
+                
               </div>
             </Content>
           </Layout>
-          );
         </Layout>
       );
     } else {
       handleLogout();
+      return null;
     }
   };
 
   return render();
 };
+
 export default Dashboard;

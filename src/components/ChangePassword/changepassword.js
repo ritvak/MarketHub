@@ -33,7 +33,7 @@ const ChangePassword = ({ token }) => {
   };
 
   return (
-    <div className="container">
+    <div className="container1">
       <h2>Change Password</h2>
       <div className="input-container">
         <label htmlFor="oldPassword">Old Password</label>
