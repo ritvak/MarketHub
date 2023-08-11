@@ -4,10 +4,14 @@ import { Route, Routes } from 'react-router-dom';
 
 import { Layout } from 'antd';
 import Loader from './shared/loader';
+import ForgotPassword from './components/ForgotPassword/forgotPassword';
+import ResetPassword from './components/ResetPassword/resetPassword';
 
 const Login = lazy(() => import('./components/Login/login'));
 
 const Dashboard = lazy(() => import('./components/Dashboard/dashboard'));
+
+
 
 const { Content } = Layout;
 
@@ -45,6 +49,14 @@ const Routing = () => {
               <Route
                 path="/dashboard"
                 element={<Dashboard />}
+              />
+              <Route
+                path="/forgotPassword"
+                element={<ForgotPassword />}
+              />
+              <Route
+                path="/resetPassword/:id/:token"
+                element={<ResetPassword />}
               />
             </Routes>
           </Content>

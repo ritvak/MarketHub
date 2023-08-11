@@ -98,6 +98,17 @@ const Login = () => {
                 {validator.message("Password", fields.password, "required")}
               </div>
             </Form.Item>
+               
+            <div className="form-links">
+    <div style={{ flex: 1 }}></div> {/* Empty div to push the link to the right */}
+    <div>
+        <a className="forgot-password-link" href="/forgotPassword">Forgot Password?</a>
+    </div>
+</div>
+
+
+
+
 
             <Form.Item
               wrapperCol={{

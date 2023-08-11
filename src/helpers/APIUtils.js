@@ -11,7 +11,7 @@ class ApiUtils {
     response = true
   ) {
     this.axios = axios.create({
-      baseURL: `${process.env.REACT_APP_API_URL}/`,
+      baseURL: `${process.env.REACT_APP_API_URL}/api`,
     });
 
     if (request) {
@@ -120,6 +120,25 @@ class ApiUtils {
         newPassword,
       },
     });
+
+    forgotPassword = (data) =>
+    this.axios({
+      method: 'POST',
+      url: '/admin/forgotPassword',
+      data,
+    });
+
+    resetPassword = (newPassword,token) =>
+    this.axios({
+      method: "POST",
+      url: "/admin/resetPassword",
+      data: {
+        token,
+        newPassword,
+      },
+    });
+    
+
 }
 
 export default ApiUtils;
