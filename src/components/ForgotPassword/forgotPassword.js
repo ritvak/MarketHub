@@ -14,9 +14,9 @@ const ForgotPassword = () => {
 
   const navigate = useNavigate();
 
-  const {
-    token: { colorBgContainer },
-  } = theme.useToken();
+  // const {
+  //   token: { colorBgContainer },
+  // } = theme.useToken();
 
   const [loading, setLoading] = useState(false);
   const [fields, setFields] = useState({
