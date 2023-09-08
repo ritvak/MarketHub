@@ -1,0 +1,129 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.srv-validation-message {
+  color: red;
+  font-size: 12px;
+  position: absolute;
+  bottom: -20px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  Header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  Button {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .loader {
+    /* Adjust loader styles for small screens */
+  }
+
+  .ant-layout {
+    flex-direction: column;
+  }
+
+  .ant-layout-header {
+    /* Adjust header styles for small screens */
+  }
+
+  .ant-layout-sider {
+    /* Adjust sidebar styles for small screens */
+  }
+
+  .ant-layout-content {
+    /* Adjust content styles for small screens */
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .ant-layout-sider {
+    /* Adjust sidebar styles for medium screens */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ant-btn {
+    font-size: 14px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .ant-btn-icon-only.anticon svg {
+    font-size: 14px;
+  }
+
+  .ant-btn-text {
+    display: none;
+  }
+
+  .ant-btn:last-child {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  .ant-btn-icon-only.anticon svg {
+    font-size: 16px;
+  }
+
+  .ant-btn-text {
+    display: inline-block;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .header > div {
+    margin-top: 10px;
+    justify-content: flex-end;
+  }
+}

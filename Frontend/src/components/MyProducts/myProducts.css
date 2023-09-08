@@ -1,0 +1,55 @@
+ 
+.user-dummy-container {
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .user-dummy-card {
+    flex: 1 0 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    min-width: 220px;
+  }
+
+  .delete-icon:hover {
+    background-color: white; 
+    color: red; 
+  }
+  
+  @media (min-width: 576px) {
+    .user-dummy-card {
+      flex-basis: 25%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .user-dummy-card {
+      flex-basis: 33.33%;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .user-dummy-card {
+      flex-basis: 25%;
+    }
+  }
+  
+  .user-card-image {
+    height: 200px;
+    object-fit: contain;
+  }
+  
+  .card-description {
+    max-height: 100px;
+    overflow: auto;
+  }
+  
+  @media (max-width: 767px) {
+    .user-card-image {
+      height: 150px;
+    }
+  }
+  

@@ -1,0 +1,77 @@
+{
+  "name": "tutorial2",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/compatible": "^5.1.1",
+    "@ant-design/icons": "^5.1.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "antd": "^5.5.0",
+    "axios": "^1.4.0",
+    "eslint": "^8.40.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "husky": "^8.0.3",
+    "firebase": "^9.23.0",
+    "gapi-script": "^1.2.0",
+    "moment": "^2.29.4",
+    "prettier": "^2.8.8",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-facebook-login": "^4.1.1",
+    "react-google-login": "^5.2.2",
+    "react-image-lightbox": "^5.1.4",
+    "react-moment": "^1.1.3",
+    "react-redux": "^8.0.5",
+    "react-responsive": "^9.0.2",
+    "react-router-dom": "^6.11.2",
+    "react-scripts": "5.0.1",
+    "react-social-login": "^3.4.17",
+    "react-social-login-buttons": "^3.9.1",
+    "redux": "^4.2.1",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.2",
+    "simple-react-validator": "^1.6.2",
+    "socket.io-client": "^4.6.2",
+    "web-vitals": "^2.1.4"
+  },
+  "homepage": ".",
+  "scripts": {
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "start": "serve -s build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "prettier": "npx prettier --write . --config ./.prettierrc",
+    "prepare": "cd .. && husky install Front-End/.husky"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  }
+}

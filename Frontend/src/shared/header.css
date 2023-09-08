@@ -1,0 +1,143 @@
+.username {
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    display: inline-block;
+  }
+
+.logout:hover {
+  color: rgb(159,0,0);
+}
+
+.header-container {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-section {
+  display: flex;
+  align-items: center;
+}
+
+.title-text {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.search-input .ant-input {
+  font-size: 14px;
+}
+
+.centered-search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .search-bar {
+    margin-right: 20px;
+    max-width: calc(100% - 130px);
+  }
+  .logout-button {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .menu-button {
+    display: none;
+  }
+  .search-bar {
+    margin-right: 10px;
+    max-width: calc(100% - 900px);
+  }
+  .logout-button {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .title-section {
+    margin-bottom: 10px;
+  }
+  .search-bar {
+    max-width: none;
+    width: 100%;
+    margin-top: 10px;
+    padding: 0 2px;
+  }
+  .logout-button {
+    margin-right: 0;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 991px) {
+  .title-text {
+    margin-right: 10px;
+    padding: 10px;
+  }
+  .search-bar {
+    margin-right: 10px;
+    flex: 1;
+    max-width: calc(100% - 20px);
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-button {
+    display: none;
+  }
+  .search-bar {
+    margin-right: 0;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .title-section {
+    margin-bottom: 10px;
+  }
+  .search-bar {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
+
+
+@media (min-width: 992px) {
+  .search-bar {
+    margin-right: 120px;
+    max-width: 1000px;
+  }
+  .logout-button {
+    margin-right: 0;
+    display: flex;
+  }
+}
+
+@media (max-width: 109px) and (max-height: 598px) {
+  .search-bar {
+    max-width: none;
+    width: 100%;
+    padding: 0 2px;
+  }
+  .logout-button {
+    margin-right: 0;
+    font-size: 10px;
+  }
+}
